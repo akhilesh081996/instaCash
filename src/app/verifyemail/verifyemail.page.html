@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-icon name="arrow-back" slot="start" (click)="back()"></ion-icon>
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header>
+<div class="bg">
+</div>
+<ion-content>  
+  <ion-grid class="ion-no-padding">   
+    <ion-row class="log-in-area">
+      <ion-col>
+        <div class="verfy-code">
+          <ion-img class="logo" src="/assets/images/logo2.png"></ion-img>
+          <h2>Verify Email</h2>
+          <p>We have sent an OTP on your email <span>{{info?.email}}</span></p>
+          <div class="code">
+            <input [(ngModel)]="o1" size="1" type="number" maxlength="4">
+          </div>
+        </div>       
+        <div class="action-btn">
+          <ion-button expand="block" class="create-account" (click)="submit()">submit</ion-button>
+        </div>        
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+<ion-footer>
+</ion-footer>

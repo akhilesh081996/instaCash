@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-icon slot="start" name="arrow-back-outline" (click)="back()"></ion-icon>
+    <ion-img slot="start" class="header-logo" src="assets/images/insta-logo.jpg"></ion-img>
+    <ion-title>news feed</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <div class="feed-set">
+          <div class="feed-img">
+    <ion-img [src]="newsdata?.news_featured_image" ></ion-img></div>
+      <b>{{newsdata?.news_title}}</b>
+      <span>{{newsdata?.news_datetime}}</span>
+    <p>{{newsdata?.news_fulldescription}}</p>
+  </div>
+</ion-col>
+</ion-row>
+</ion-grid>
+</ion-content>

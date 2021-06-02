@@ -1,0 +1,84 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>dashboard</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-grid class="ion-no-padding">
+  <ion-row>
+    <ion-col size="12" class="search-section">
+      <ion-img src="assets/images/top-bg.png"></ion-img>
+      <div class="search-area">
+        <h2>Find Your Tickets</h2>
+        <p>Search for sports, music, movies & more get started</p>
+        <form>
+        <ion-searchbar (ionFocus)="search()" placeholder="Filter Schedules" ></ion-searchbar>
+      </form>
+      </div>     
+    </ion-col>
+    <ion-col size="12" class="categories">
+      <ion-chip (click)="getdata('undefined','nearby')" id="nearby"><ion-label>Nearby</ion-label></ion-chip>
+      <ion-chip (click)="getdata('today','today')" id="today"><ion-label>Today</ion-label></ion-chip>
+      <ion-chip (click)="getdata('price','price')" id="price"><ion-label>Price</ion-label></ion-chip>
+    </ion-col>
+
+    <ion-col size="12" class="feature-event">
+      <h2>Featured Events<span>See All</span></h2>
+      <ion-slides  [options]="slideOpts">
+        <ion-slide *ngFor="let data of result" routerLink="/eventdetail/{{data.event_id}}">
+          <div class="slide">
+            <ion-card>
+              <img *ngIf="data.media[0]?.upload_preview" [src]="data.media[0]?.upload_preview" />
+              <img *ngIf="!data.media[0]?.upload_preview" src="/assets/images/slide-1.png" />
+
+              <ion-card-header>
+                <ion-card-subtitle>$$$  •   {{data.description}}   •</ion-card-subtitle>
+                <ion-card-title>{{data.event_title}}</ion-card-title>
+              </ion-card-header>
+              <ion-card-content>
+                <span>{{data.duration}}</span>
+                <span>{{data.from_time_hour}}</span>
+                <span>${{data.price}}</span>
+              </ion-card-content>
+            </ion-card>
+          </div>
+        </ion-slide> 
+      </ion-slides>
+    </ion-col>
+    </ion-row>
+    <ion-row class="menu-options">
+      <ion-col size="6" routerLink="/livestreamevent">
+        <span>
+          <ion-img src="/assets/images/live-stream.svg"></ion-img>
+          <ion-label>Live Events</ion-label>
+        </span>      
+      </ion-col>
+      <ion-col size="6"  routerLink="/alleven">
+        <span>
+          <ion-img src="/assets/images/all-event.svg"></ion-img>
+          <ion-label>All Event</ion-label>
+        </span>       
+      </ion-col>
+    
+      <ion-col size="6" routerLink="/mycreatedevent">
+        <span>
+          <ion-img src="/assets/images/all-event.svg"></ion-img>
+          <ion-label>My Created Events</ion-label>
+        </span>      
+      </ion-col>
+      <ion-col size="6" routerLink="/bookedevent">
+        <span>
+          <ion-img src="/assets/images/all-event.svg"></ion-img>
+          <ion-label>My Booked Events</ion-label>
+        </span>      
+      </ion-col>
+      <ion-col size="6" routerLink="/favevent">
+        <span>
+          <ion-img src="/assets/images/all-event.svg"></ion-img>
+          <ion-label>My Favorites Events</ion-label>
+        </span>      
+      </ion-col>
+    </ion-row>
+</ion-grid>
+</ion-content>

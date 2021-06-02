@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-icon slot="start" name="arrow-back-outline" (click)="back()"></ion-icon>
+    <ion-title><h1>$<b></b></h1></ion-title>
+    <ion-button slot="end" (click)="pay()">Send</ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  
+  <ion-list *ngIf="alluser">
+    <ion-radio-group >     
+      <ion-item > 
+        <ion-label>
+          <ion-thumbnail>
+            <img [src]="alluser?.profile_image">
+          </ion-thumbnail>
+          <section>
+            <h3>{{alluser?.first_name}}</h3>
+            <h6>{{alluser?.email}}</h6>
+          </section>
+        </ion-label>
+      </ion-item>
+</ion-radio-group>
+</ion-list>
+
+<div class="ammount-pay">
+  <ion-icon name="logo-usd"></ion-icon>
+  <ion-input placeholder="Enter Amount" [(ngModel)]="number"></ion-input>
+</div>
+</ion-content>

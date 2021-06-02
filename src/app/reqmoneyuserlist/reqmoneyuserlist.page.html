@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-icon slot="start" name="arrow-back-outline" (click)="back()"></ion-icon>
+    <ion-img slot="start" class="header-logo" src="assets/images/insta-logo.jpg"></ion-img>
+    <ion-title><h1>$<b>{{number}}</b></h1></ion-title>
+    <ion-button slot="end" (click)="pay()">Request</ion-button>
+  </ion-toolbar>
+  <img src="assets/top-border.svg" class="top-border"/>
+</ion-header>
+
+<ion-content>
+  <div class="search-list">
+    <ion-searchbar (input)="search($event)"></ion-searchbar>
+  </div>
+  <ion-spinner *ngIf="!ready" name="crescent"></ion-spinner>
+  
+  <ion-list>
+    <ion-radio-group >     
+      <ion-item *ngFor="let data of alluser"> 
+        <ion-label>
+          <ion-thumbnail>
+            <img [src]="data.user_avatar">
+          </ion-thumbnail>
+          <section>
+            <h3>{{data.label}}</h3>
+            <h6>{{data.email}}</h6>
+          </section>
+        </ion-label>
+        <ion-radio slot="end" color="success" value="{{data.id}}" (click)="checkuser(data.id)"></ion-radio>
+      </ion-item>
+</ion-radio-group>
+</ion-list>
+
+
+</ion-content>

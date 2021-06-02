@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-icon slot="start" name="reload-outline" (click)="reload()"></ion-icon>
+        <ion-title>My Wallet</ion-title>
+    <ion-img slot="end" *ngIf="userprofile?.userImage" [src]="userprofile?.userImage"></ion-img>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-grid class="ion-no-padding">
+    <ion-row>
+      <ion-col size="12" class="total-price">
+        <div class="total-price-detail">
+          <span class="price-card">
+            Current Balance <b>${{availablebalnc}}</b> Available
+          </span>
+          <ul class="segment-btn">
+           <li class="active" routerLink="/addmoney/send"><a class="active" >Send Funds</a></li> 
+           <li class="active" routerLink="/sendwaltobank"><a class="active" >Send wallet Funds to bank account</a></li> 
+
+           <li class="active" (click)="revi()"><a class="active"  >Request Funds</a></li> 
+           <li class="active"routerLink="/addmoney/wal"><a class="active"  >Add Funds to wallet</a></li> 
+           <li class="active"routerLink="/applygiftcard"><a class="active"  >Add Funds to wallet from gift card</a></li> 
+          </ul>
+        </div>      
+      </ion-col>
+      <ion-col size="12" class="primary-card" *ngIf="card_1">    
+          <div>   
+            <span>
+              Primary Card
+            </span>       
+            <ion-label *ngIf="cards">
+              <ion-img src="assets/images/card.svg"></ion-img>
+              <h3>.... .... .... {{card_1.last4}}</h3>
+            </ion-label>
+          </div>
+          </ion-col>    
+          <ion-col size="12" class="transaction-history">
+            <h2>transaction History <ion-img src="assets/images/more-menu.svg"></ion-img></h2>
+            <ion-list>         
+              <ion-item *ngFor="let data of transactions">              
+                <ion-label>
+                  <ion-img *ngIf="data.status == '1'" src="assets/images/profit.svg"></ion-img>
+                  <ion-img *ngIf="data.status != '1'" src="assets/images/loss.svg"></ion-img>
+                  <h2>{{data.transaction_id}}<span>{{data.updated_at}}</span></h2>
+                  <h3>${{data.balance}}</h3>                  
+                </ion-label>
+              </ion-item>
+              </ion-list>
+            </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-infinite-scroll threshold="100px" (ionInfinite)="loadMore($event)">
+    <ion-infinite-scroll-content loadingText="Loading more transaction...">
+    </ion-infinite-scroll-content>
+</ion-infinite-scroll>
+</ion-content>

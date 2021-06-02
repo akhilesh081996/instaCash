@@ -1,0 +1,194 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-icon slot="start" name="arrow-back-outline" (click)="back()"></ion-icon>
+    <ion-img slot="start" class="header-logo" src="assets/images/insta-logo.jpg"></ion-img>
+    <ion-title>Create event</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="createEvent" (ngSubmit)="submit(createEvent.value)">
+<ion-grid>
+  <ion-row>
+    <ion-col size="12" class="create-parameter step-1" *ngIf="divfirst">
+      <div class="parameter-field " >
+        <h2>Event Information</h2>
+        <section>
+          <ion-label>Event Title</ion-label>
+        <ion-input type="text" placeholder="Event Title" formControlName="title"></ion-input>
+        </section>
+        <section>
+          <ion-label>Select Date</ion-label>
+        <ion-datetime formControlName="event_date" max="3000" min="{{minDate}}"></ion-datetime>
+        </section>
+        <div class="half-input-devide">
+          <section>
+            <ion-label>Start Time</ion-label>
+          <ion-datetime  class="half-input" display-format="h:mm A" picker-format="h:mm A" formControlName="from_time" ></ion-datetime>
+          </section>
+          <section>
+            <ion-label>End Time</ion-label>
+          <ion-datetime class="half-input" display-format="h:mm A" picker-format="h:mm A" formControlName="to_time" ></ion-datetime>
+          </section>
+        </div>
+        
+        <h2>Description</h2>
+        <ion-textarea placeholder="type..." formControlName="description"></ion-textarea>
+
+        <ion-button expand="block"  (click)="secstep()" [disabled]="!createEvent.get('title').valid || !createEvent.get('event_date').valid || !createEvent.get('from_time').valid || !createEvent.get('to_time').valid || !createEvent.get('description').valid">Next</ion-button>
+      </div> 
+      </ion-col>
+
+      <ion-col size="12" class="create-parameter step-2" *ngIf="divsec">
+      <div class="parameter-field " >
+        <h2>Address</h2>
+        <section>
+          <ion-label>Street 01</ion-label>
+        <ion-input type="text" formControlName="address_street1"></ion-input>
+        </section>
+        <section>
+          <ion-label>Street 02</ion-label>
+        <ion-input type="text" formControlName="address_street2"></ion-input>
+        </section>
+        <div class="half-input-devide">
+          <div class="half-input">
+            <section>
+              <ion-label>City</ion-label>
+            <ion-input  type="text" formControlName="city"></ion-input>
+              </section>
+          </div>
+          <div class="half-input">
+            <section>
+              <ion-label>Zip Code</ion-label>
+            <ion-input  type="number" formControlName="zip"></ion-input>
+            </section>
+          </div> 
+        </div>    
+        <section>
+          <ion-label>State</ion-label>
+        <ion-select formControlName="state">
+          <ion-select-option value="Alabama">Alabama</ion-select-option>
+          <ion-select-option value="Alaska">Alaska</ion-select-option>
+          <ion-select-option value="Arizona">Arizona</ion-select-option>
+          <ion-select-option value="Arkansas">Arkansas</ion-select-option>
+          <ion-select-option value="California">California</ion-select-option>
+          <ion-select-option value="Colorado">Colorado</ion-select-option>
+          <ion-select-option value="Connecticut">Connecticut</ion-select-option>
+          <ion-select-option value="Delaware">Delaware</ion-select-option>
+          <ion-select-option value="Florida">Florida</ion-select-option>
+          <ion-select-option value="Georgia">Georgia</ion-select-option>
+          <ion-select-option value="Hawaii">Hawaii</ion-select-option>
+          <ion-select-option value="Idaho">Idaho</ion-select-option>
+          <ion-select-option value="Illinois">Illinois</ion-select-option>
+          <ion-select-option value="Indiana">Indiana</ion-select-option>
+          <ion-select-option value="Iowa">Iowa</ion-select-option>
+          <ion-select-option value="Kansas">Kansas</ion-select-option>
+          <ion-select-option value="Kentucky">Kentucky</ion-select-option>
+          <ion-select-option value="Louisiana">Louisiana</ion-select-option>
+          <ion-select-option value="Maine">Maine</ion-select-option>
+          <ion-select-option value="Maryland">Maryland</ion-select-option>
+          <ion-select-option value="Massachusetts">Massachusetts</ion-select-option>
+          <ion-select-option value="Michigan">Michigan</ion-select-option>
+          <ion-select-option value="Minnesota">Minnesota</ion-select-option>
+          <ion-select-option value="Mississippi">Mississippi</ion-select-option>
+          <ion-select-option value="Missouri">Missouri</ion-select-option>
+          <ion-select-option value="Montana">Montana</ion-select-option>
+          <ion-select-option value="Nebraska">Nebraska</ion-select-option>
+          <ion-select-option value="Nevada">Nevada</ion-select-option>
+          <ion-select-option value="New Hampshire">New Hampshire</ion-select-option>
+          <ion-select-option value="New Jersey">New Jersey</ion-select-option>
+          <ion-select-option value="New Mexico">New Mexico</ion-select-option>
+          <ion-select-option value="New York">New York</ion-select-option>
+          <ion-select-option value="North Carolina">North Carolina</ion-select-option>
+          <ion-select-option value="North Dakota">North Dakota</ion-select-option>
+          <ion-select-option value="Ohio">Ohio</ion-select-option>
+          <ion-select-option value="Oklahoma">Oklahoma</ion-select-option>
+          <ion-select-option value="Oregon">Oregon</ion-select-option>
+          <ion-select-option value="Pennsylvania">Pennsylvania</ion-select-option>
+          <ion-select-option value="Rhode Island">Rhode Island</ion-select-option>
+          <ion-select-option value="South Carolina">South Carolina</ion-select-option>
+          <ion-select-option value="South Dakota">South Dakota</ion-select-option>
+          <ion-select-option value="Tennessee">Tennessee</ion-select-option>
+          <ion-select-option value="Texas">Texas</ion-select-option>
+          <ion-select-option value="Utah">Utah</ion-select-option>
+          <ion-select-option value="Vermont">Vermont</ion-select-option>
+          <ion-select-option value="Virginia">Virginia</ion-select-option>
+          <ion-select-option value="Washington">Washington</ion-select-option>
+          <ion-select-option value="West Virginia">West Virginia</ion-select-option>
+          <ion-select-option value="Wisconsin">Wisconsin</ion-select-option>
+          <ion-select-option value="Wyoming">Wyoming</ion-select-option>
+        </ion-select>   
+        </section>
+        <h2>Time in Hrs</h2>  
+        <section>
+          <ion-label>Select Time</ion-label>
+        <ion-select type="text" formControlName="duration">
+          <ion-select-option value="1">1</ion-select-option>
+          <ion-select-option value="2">2</ion-select-option>
+          <ion-select-option value="3">3</ion-select-option>
+          <ion-select-option value="4">4</ion-select-option>
+          <ion-select-option value="5">5</ion-select-option>
+          <ion-select-option value="6">6</ion-select-option>
+          <ion-select-option value="7">7</ion-select-option>
+          <ion-select-option value="8">8</ion-select-option>
+          <ion-select-option value="9">9</ion-select-option>
+          <ion-select-option value="10">10</ion-select-option>
+        </ion-select>
+        </section>
+        <h2>Price of the ticket in $</h2>  
+        <section>
+          <ion-label>Select Price</ion-label>
+        <ion-select type="text" formControlName="price">
+          <ion-select-option value="5">5</ion-select-option>
+          <ion-select-option value="10">10</ion-select-option>
+          <ion-select-option value="15">15</ion-select-option>
+          <ion-select-option value="20">20</ion-select-option>
+          <ion-select-option value="25">25</ion-select-option>
+          <ion-select-option value="30">30</ion-select-option>
+          <ion-select-option value="35">35</ion-select-option>
+          <ion-select-option value="40">40</ion-select-option>
+          <ion-select-option value="45">45</ion-select-option>
+          <ion-select-option value="50">50</ion-select-option>
+          <ion-select-option value="55">55</ion-select-option>
+          <ion-select-option value="60">60</ion-select-option>
+          <ion-select-option value="65">65</ion-select-option>
+          <ion-select-option value="70">70</ion-select-option>
+          <ion-select-option value="75">75</ion-select-option>
+          <ion-select-option value="80">80</ion-select-option>
+          <ion-select-option value="85">85</ion-select-option>
+          <ion-select-option value="90">90</ion-select-option>
+          <ion-select-option value="95">95</ion-select-option>
+          <ion-select-option value="100">100</ion-select-option>
+        </ion-select>
+        </section>
+        <ion-button expand="block" (click)="thirdstep()" [disabled]="!createEvent.get('city').valid || !createEvent.get('zip').valid || !createEvent.get('address_street1').valid || !createEvent.get('state').valid || !createEvent.get('duration').valid || !createEvent.get('price').valid">Next</ion-button>
+      </div> 
+      </ion-col>
+
+
+      <ion-col class="create-parameter step-3" *ngIf="divthird">
+        <div class="image-preview">
+          <h3>Upload image</h3>
+        </div>
+        <div class="upload-img">   
+          <section>
+            <div class="add-img">
+              <input type="file" id="myfile"  (change)="media_preview($event)">
+              <ion-img src="assets/images/camera.svg" (click)="addimage()"></ion-img>
+            </div>
+            <ul>
+              <li *ngFor="let data of mediaArray">
+                <ion-img [src]="data.upload_preview"></ion-img>
+              </li>
+            </ul>
+          </section>  
+        </div>
+      
+        <div class="action">
+          <ion-button (click)="submit(createEvent.value)" >Complete</ion-button>
+        </div>
+      </ion-col>
+  </ion-row>
+</ion-grid>
+</form>
+</ion-content>

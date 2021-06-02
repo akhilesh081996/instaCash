@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-img class="header-logo" src="assets/images/insta-logo.jpg"></ion-img>
+    <ion-title>Wallet</ion-title>
+    <ion-icon slot="end" src="assets/nfc.svg" (click)="checkNFC()"></ion-icon>
+    <ion-icon slot="end" name="reload-outline" (click)="reload()"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+<ion-content >
+<ion-grid class="ion-no-padding">
+  <ion-row>
+    <ion-col size="12">
+        <div class="money-card">
+          <div class="money-pannel">
+            <h2><small>$</small>{{availablebalnc}}</h2>
+          </div>  
+        </div>      
+        <div class="money-pad">
+          <div class="money-amt">
+            <span>${{number}}</span>
+          </div>
+          <div class="keypad">
+            <span (click)="addmoney('1')"><b>1</b></span>
+            <span (click)="addmoney('2')"><b>2</b></span>
+            <span (click)="addmoney('3')"><b>3</b></span>
+            <span (click)="addmoney('4')"><b>4</b></span>
+            <span (click)="addmoney('5')"><b>5</b></span>
+            <span (click)="addmoney('6')"><b>6</b></span>
+            <span (click)="addmoney('7')"><b>7</b></span>
+            <span (click)="addmoney('8')"><b>8</b></span>
+            <span (click)="addmoney('9')"><b>9</b></span>
+            <span (click)="cut()"><b>x</b></span>
+            <span (click)="addmoney('0')"><b>0</b></span>
+            <span (click)="addmoney('.')"><b>.</b></span>
+          </div>
+          <div class="act-btn">
+            <ion-button (click)="send()" [disabled]="!availablebalnc">send</ion-button>
+            <ion-button (click)="revi()" class="request">request</ion-button>    
+          </div>
+        </div>     
+    </ion-col>
+    <ion-col size="12" class="ion-no-padding">
+    </ion-col>
+  </ion-row>
+</ion-grid>
+</ion-content>

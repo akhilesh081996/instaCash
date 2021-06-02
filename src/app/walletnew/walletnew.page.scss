@@ -1,0 +1,249 @@
+
+
+ion-title {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+ion-toolbar {
+    --background: #081319;
+    color: #fff;
+    --padding-start: 15px;
+    --padding-end: 15px;
+    border-radius: 0px;
+    ion-icon {
+        font-size: 24px;
+        padding: 5px;
+    }
+    ion-button{
+        text-transform: capitalize;
+        --border-radius: 50px;
+        display: inline-block;
+        font-size: 11px;
+        min-width: 60px;
+        --background: #ff002b;
+        margin-right: 25px;
+    }
+}
+
+.header-md::after {
+    background-image: none;
+}
+
+
+ion-grid {
+    --background: #081319;
+}
+.money-pannel {
+    border-radius: 16px;
+    padding: 20px;
+    width: 80%;
+}
+
+.money-pannel h2 {
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 50px;
+    margin: 0;
+    line-height: 32px;
+    display: flex;
+    justify-content: center;
+    font-weight: 300;
+}
+
+.money-pannel h2 small {
+    display: block;
+    font-size: 24px;
+    margin-bottom: 0;
+    margin-right: 5px;
+}
+
+.money-card {
+    padding: 25px 15px;
+    background: #081319;
+    border-radius: 0px 0px 0px 20px;
+    height: calc(100vh - 585px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bg-decoration {
+    background: #081319;
+    height: 30px;
+}
+
+span.deco {
+    display: block;
+    width: 100%;
+    height: 30px;
+    background: #fff;
+    border-radius: 0 20px 0 0;
+}
+
+.money-amt {
+    text-align: center;
+    margin-bottom: 15px;
+    width: 100%;
+    display: inline-block;
+    max-width: 300px;
+span {
+    background: #f2f2f2;
+    padding: 15px 20px;
+    font-size: 20px;
+    border-radius: 28px;
+    margin: 0 auto 0;
+    display: inline-block;
+    min-width: 100px;
+    border: none;
+}
+}
+
+.keypad {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    max-width: 360px;
+}
+
+.keypad span {
+    width: 33.3%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.keypad span b {
+    font-size: 24px;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    margin: 6px;
+    color: #081319;
+    font-weight: 500;
+    background: #fff;
+}
+
+.act-btn {
+    padding: 20px 0 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    gap: 0;
+}
+
+ion-button {
+    text-transform: capitalize;
+    --border-radius: 0;
+    display: inline-block;
+    font-size: 16px;
+    max-width: 50%;
+    --background: var(--ion-color-primary);
+    height: 48px;
+    width: 50%;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+ion-img.header-logo {
+    max-width: 64px;
+    margin-left: 0px;
+}
+
+.header-ios ion-toolbar:last-of-type {
+    --border-width: 0;
+}
+.transparentBody {
+    background: transparent !important;
+}
+.show-qr-scanner {
+    display: none;
+  }
+
+  .money-pad {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 30px;
+
+}
+
+
+ion-list {
+    width: 100%;
+    padding: 0 15px 15px;
+    h1 {
+        display: flex;
+        justify-content: space-between;
+        font-size: 18px;
+        align-items: center;
+        margin: 5px 0;
+        text-transform: capitalize;
+        color: #262626;
+        ion-icon {
+            font-size: 24px;
+        }
+    }
+    ion-item {
+        --padding-start: 0;
+        --inner-padding-end: 0;
+        --inner-border-width: 0;
+        border-bottom: 1px dashed #dbdbdb;
+        --min-height: 39px;
+        h2 {
+            text-transform: capitalize;
+            font-size: 14px !important;
+            color: #8e8e8e;
+            font-weight: 300;
+        }
+        h3 {
+            color: #666;
+            font-size: 12px!important;
+        }
+        ion-img {
+            width: 12px;
+            margin-right: 10px;
+        }
+    }
+    
+}
+ion-refresher{
+    background: white;
+}
+
+
+ion-button.request {
+    --background: #1b2e38;
+}
+
+
+
+@media only screen and (max-width: 340px) {
+    .keypad span b {
+        width: 38px;
+        height: 38px;
+    }
+
+    .money-amt span {
+        padding: 10px 15px;
+    }
+    .money-pannel {
+        padding: 10px;
+    }
+    .money-pannel h2 {
+        font-size: 28px;
+    }
+    .money-card {
+        min-height: calc(100vh - 458px);
+    }
+  }

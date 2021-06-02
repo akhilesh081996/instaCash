@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-thumbnail>
+      <img src="assets/images/list1.png">
+    </ion-thumbnail>
+    <ion-title>username</ion-title>
+    <span slot="end">live</span>
+    <ion-icon name="close-outline" slot="end" (click)="backstream()"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-grid class="ion-padding">
+  <video  autoplay webkit-playsinline playsinline [src]="streaming_url">
+  </video>
+</ion-grid>
+</ion-content>
+<ion-footer>
+</ion-footer>

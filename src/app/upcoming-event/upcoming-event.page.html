@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-icon name="arrow-back" slot="start" (click)="back()"></ion-icon>
+    <ion-title>Event</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid class="ion-no-padding">
+    <ion-row>
+      <ion-col size="12" class="upcomming-event">
+          <ion-img [src]="result?.media[0]?.upload_preview"></ion-img>
+          <div class="event-detail">
+            <span>
+              <h3><b>{{result?.event_title}}</b>{{result?.description}}</h3>
+              <p>{{result?.event_day}} {{result?.event_month}} <b>{{result?.from_time_hour}}- {{result?.to_time_hour}}</b></p>
+            </span>
+            <span>${{result?.price}}</span>
+          </div>
+          <div class="next-event">
+            <b>Featuring</b>
+            <h2>{{result?.description}} <span>{{result?.address_street1}} {{result?.state}},{{result?.zip}}</span></h2>
+            <ion-button expand="block" (click)="bookevent()">Book Now</ion-button>
+          </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

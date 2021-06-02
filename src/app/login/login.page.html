@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header>
+<div class="bg">
+</div>
+<ion-content>  
+  <ion-grid class="ion-no-padding">   
+    <ion-row class="log-in-area">
+      <ion-col>
+        <form  [formGroup]="loginForm" (ngSubmit)="signIn()">
+        <ion-img class="logo" src="/assets/images/logo2.png"></ion-img>
+        <div class="parameters">
+          <ion-label position="floating">Email</ion-label>
+          <ion-item>   
+            <ion-img src="/assets/images/user.svg"></ion-img>
+            <ion-input type="email"  formControlName="email"></ion-input>
+          </ion-item>
+        </div>
+        <div class="parameters">
+          <ion-label position="floating">Password</ion-label>
+          <ion-item>   
+            <ion-img src="/assets/images/password.svg"></ion-img>
+            <ion-input [type]="passwordType"  formControlName="password"></ion-input>
+            <ion-img (click)='hideShowPassword()' src="/assets/images/hise.svg"></ion-img>
+          </ion-item>
+        </div>      
+        <div class="action-btn">
+          <ion-button expand="block" class="create-account" type="submit" [disabled]="!loginForm.valid" > Sign In</ion-button>
+        </div>  
+      </form>      
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+<ion-footer>
+  <p>New User?<span  routerLink="/register">Sign up</span></p>
+</ion-footer>

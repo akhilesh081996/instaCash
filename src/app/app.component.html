@@ -1,0 +1,65 @@
+<ion-app>
+
+  <ion-menu side="start" menuId="first" contentId="main" swipeGesture="false" >
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-title >
+         Menu
+        </ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list class="menu_list">
+        <ion-menu-toggle auto-hide="false" >
+          <ion-item  routerLink="/tabs/mywallet">
+            <ion-icon slot="start" src="assets/images/home.svg"></ion-icon>           
+            <ion-label>
+              Home
+            </ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle auto-hide="false" >
+          <ion-item  routerLink="/editprofile">
+            <ion-icon slot="start" src="assets/images/edit-user.svg"></ion-icon>   
+            <ion-label>
+              Edit Profile
+            </ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle auto-hide="false" >
+          <ion-item  routerLink="/tabs/newsfeed">
+            <ion-icon slot="start" src="assets/images/newspaper.svg"></ion-icon>            
+            <ion-label>
+              News Feed
+            </ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle auto-hide="false" >
+          <ion-item  routerLink="/listing">
+            <ion-icon slot="start" src="assets/images/money-bag.svg"></ion-icon>      
+            <ion-label>
+            Money Request
+            </ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle auto-hide="false" >
+          <ion-item  routerLink="/tabs/contact">
+            <ion-icon slot="start" src="assets/images/contact-book.svg"></ion-icon>            
+            <ion-label>
+              Contact
+            </ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle auto-hide="false" >
+          <ion-item  (click)="logout()">
+            <ion-icon slot="start" src="assets/images/logout.svg"></ion-icon>           
+            <ion-label>
+              Logout
+            </ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet id="main"></ion-router-outlet>
+</ion-app>

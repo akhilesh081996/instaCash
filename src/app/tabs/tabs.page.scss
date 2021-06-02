@@ -1,0 +1,40 @@
+
+.tab-selected {
+    .desktop {
+    display: block;
+    width: 100%;
+    max-width: 25px;
+    height: 25px;
+    object-fit: contain;
+    }
+    .mobile {
+    display: none;
+    width: 100%;
+    max-width: 25px;
+    height: 25px;
+    object-fit: contain;
+    }
+    }
+    .desktop {
+    display: none;
+    width: 100%;
+    max-width: 25px;
+    height: 25px;
+    object-fit: contain;
+    }
+    .mobile {
+    display: block;
+    width: 100%;
+    max-width: 25px;
+    height: 25px;
+    object-fit: contain;
+    }
+
+
+    ion-tab-bar {
+        background: #081319;
+        border-radius: 0;
+    }
+    ion-tab-button {
+        background: transparent;
+    }

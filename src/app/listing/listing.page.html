@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-icon slot="start" src="assets/images/back-icon.svg" (click)="back()"></ion-icon>
+    <ion-img slot="start" class="header-logo" src="assets/images/insta-logo.jpg"></ion-img>
+    <ion-title>Requests</ion-title>
+    <ion-icon slot="end" name="reload-outline" (click)="reload()"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list *ngIf="!havelist">
+    <ion-item >
+      <ion-label >
+        <h3>You currently have no requests.</h3>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+<ion-list *ngIf="havelist">
+  <ion-item *ngFor="let data of listing">
+    <ion-thumbnail slot="start">
+      <img [src]="data.userpic">
+    </ion-thumbnail>
+    <ion-label >
+      <h3>{{data.name}}</h3>
+      <p>{{data.email}}</p>
+      <span *ngIf="data.status == 'pending'">
+         <ion-button (click)="openreq(data)">accept</ion-button>
+        <ion-button class="reject" (click)="openreq(data)">reject</ion-button>
+      </span>
+      <span  *ngIf="data.status != 'pending'">
+        <ion-button *ngIf="data.status == 'accept'">accepted</ion-button>
+       <ion-button *ngIf="data.status == 'reject'" class="reject">rejected</ion-button>
+     </span>
+    </ion-label>
+    <section>
+      <b>${{data.amount}}</b>     
+    </section>
+  </ion-item>
+</ion-list>
+</ion-content>

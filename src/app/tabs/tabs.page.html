@@ -1,0 +1,25 @@
+<ion-tabs>
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="mywallet" (click)="changes()">
+      <img src="assets/images/wallet-footer.svg" class="mobile" />
+      <img src="assets/images/wallet-footer2.svg" class="desktop" />
+    </ion-tab-button>
+    <ion-tab-button (click)="gotoQR()">
+      <img src="assets/images/qr-icon.svg" class="mobile" />
+      <img src="assets/images/qr-red.svg" class="desktop" />
+    </ion-tab-button>
+   
+    <ion-tab-button tab="profile">
+      <img src="assets/images/user.svg" class="mobile" />
+      <img src="assets/images/user2.svg" class="desktop" />
+    </ion-tab-button>
+    <ion-tab-button tab="newsfeed">
+      <img src="assets/images/newspaperwhite.svg" class="mobile" />
+      <img src="assets/images/newspaper.svg" class="desktop" />
+    </ion-tab-button>
+    <ion-tab-button (click)="toggleMenu()">
+      <img src="assets/images/menu.svg" class="mobile" />
+      <img src="assets/images/menu2.svg" class="desktop" />
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>

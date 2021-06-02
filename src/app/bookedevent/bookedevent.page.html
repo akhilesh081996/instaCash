@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-icon slot="start" name="arrow-back-outline" (click)="back()"></ion-icon>
+    <ion-img slot="start" class="header-logo" src="assets/images/insta-logo.jpg"></ion-img>
+    <ion-title>Booked Events</ion-title>
+    <ion-icon slot="end" name="add-sharp" class="add-event" routerLink="/createevent"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let data of result;let i = index" >
+    <div class="event-img">
+      <ion-icon name="heart-outline"  *ngIf="data.favpost == '0'" (click)="favratepost(data.event_id)"></ion-icon>
+      <ion-icon name="heart-sharp" class="redheart" *ngIf="data.favpost != '0'" (click)="unfavratepost(data.event_id)"></ion-icon>
+      <ion-icon name="trash" class="delete" (click)="delete(data,i)"></ion-icon>
+
+
+    <img [src]="data.media[0]?.upload_preview" /> 
+    <div class="days-left">{{data.duration}}<span>Hrs</span></div>  
+  </div>
+    <ion-card-content routerLink="/eventdetail/{{data.event_id}}">
+    <span>
+      <b>{{data.event_day}}</b>
+      {{data.event_month}}
+    </span>
+    <ion-label>
+      <h2>{{data.event_title}}</h2>
+      <p>{{data.description}}</p>
+      <small>{{data.from_time_hour}} - {{data.to_time_hour}}</small>
+    </ion-label>
+    <section>${{data.price}}</section>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

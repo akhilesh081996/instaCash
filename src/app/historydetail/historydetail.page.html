@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-icon slot="start" src="assets/images/back-icon.svg" (click)="nav.back()"></ion-icon>
+    <ion-img slot="start" class="header-logo" src="assets/images/insta-logo.jpg"></ion-img>
+    <ion-title>Payment detail</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid class="ion-padding">
+    <ion-card>
+      <ion-card-content>
+        <ion-label>
+          <h5 *ngIf="reciverData?.status == 1">money added <b> ${{reciverData?.balance}}</b></h5>
+          <h5 *ngIf="reciverData?.status != 1">money sent <b class="red"> ${{reciverData?.balance}}</b></h5>
+          <small>{{reciverData?.created_at}}</small>
+          <small>Transaction Id : {{reciverData?.transaction_id}}</small>
+          <small>{{reciverData?.message}}</small>
+        <ion-icon name="checkmark-circle-sharp" slot="end" *ngIf="reciverData?.status == 1"></ion-icon>
+        <ion-icon name="checkmark-circle-sharp" slot="end" class="red" *ngIf="reciverData?.status == '3'"></ion-icon>
+        </ion-label>
+      </ion-card-content>
+    </ion-card>
+  </ion-grid>
+</ion-content>

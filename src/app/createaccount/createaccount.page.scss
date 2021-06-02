@@ -1,0 +1,120 @@
+ion-toolbar {
+    --background: #081319;
+    color: #fff;
+    --padding-start: 14px;
+    --padding-end: 14px;
+    ion-icon {
+        font-size: 24px;
+    }
+}
+.header-ios ion-toolbar:last-of-type {
+    --border-width: 0px;
+}
+
+ion-col.upload-profile-pic {
+    background: #ffffff;
+}
+span.profile-pic {
+    background: #081319;
+    display: flex;
+    padding: 60px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 0px 0px 0px 20px;
+    color: #fff;
+   img {
+        width: 150px;
+        height: 150px;
+        border-radius: 100px;
+        margin-bottom: 16px;
+    }   
+}
+ion-col.create-parameter {
+    background: #081319;
+}
+form {
+    width: 100%;
+}
+.parameter-field {
+    border-radius: 0px 20px 0px 0px;
+    background: #fff;
+    padding: 20px;
+    ion-input {
+        --background: #f2f2f2!important;
+        border-radius: 16px;
+        --padding-start: 15px!important;
+        font-size: inherit;
+        height: 50px;
+        margin-bottom: 15px;
+    }
+    ion-select {
+        background: #f2f2f2!important;
+        border-radius: 16px;
+        --padding-start: 15px!important;
+        font-size: inherit;
+        height: 50px;
+        margin-bottom: 15px;
+        --padding-end: 25px!important;
+    }
+    h2 {
+        text-align: center;
+        margin-top: 0;
+        font-size: 16px;
+        margin-bottom: 16px;
+        text-transform: uppercase;
+    }
+    span {
+        color: #cc0012;
+        text-align: center;
+        display: block;
+        padding: 20px 0;
+    }
+    ion-button {
+        --border-radius: 16px;
+        height: 50px;
+        margin-bottom: 30px;
+        margin-top: 16px;
+    }
+}
+ion-title {
+    font-style: normal;
+}
+ion-icon.more {
+    background: #cc0012;
+    color: #fff;
+    padding: 4px;
+    border-radius: 30px;
+    font-size: 17px!important;
+}
+.mapouter {
+    position: relative;
+    text-align: right;
+    margin-top: 10px;
+}
+
+.gmap_canvas {
+    overflow: hidden;
+    background: none!important;
+}
+
+iframe#gmap_canvas {
+    height: auto;
+    float: left;
+    max-width: 320px;
+    width: 100%;
+}
+div#maaap {
+    width: 100%;
+    height: 230px;
+}
+
+
+.parameter-field {
+    ion-label {
+        font-size: 14px;
+        margin-bottom: 5px!important;
+        display: block;
+    }
+
+}

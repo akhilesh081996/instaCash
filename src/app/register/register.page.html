@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>login</ion-title>
+  </ion-toolbar>
+</ion-header>
+<div class="bg">
+</div>
+<ion-content>  
+  <ion-grid class="ion-no-padding">   
+    <ion-row class="log-in-area">
+      <form [formGroup]="registerForm" (ngSubmit)="openVerify()">
+      <ion-col>
+        <ion-img class="logo" src="/assets/images/logo2.png"></ion-img>
+        <div class="parameters">
+          <ion-label position="floating">Email</ion-label>
+          <ion-item>   
+            <ion-img src="/assets/images/user.svg"></ion-img>
+            <ion-input type="email"   formControlName="email"></ion-input>
+          </ion-item>
+        </div>
+        <div class="parameters">
+          <ion-label position="floating" >Password</ion-label>
+          <ion-item>   
+            <ion-img src="/assets/images/password.svg"></ion-img>
+            <ion-input [type]="passwordType" autocapitalize="off" clearOnEdit="false" formControlName="password"></ion-input>
+            <ion-img src="/assets/images/hise.svg" (click)='hideShowPassword()'></ion-img>
+          </ion-item>
+        </div> 
+        <div class="term">                
+          <section><ion-checkbox  slot="start" (click)="termcon($event)"></ion-checkbox>
+          <ion-label (click)="goto('termcondition')">I agree to terms & conditions</ion-label></section>
+          <section><ion-checkbox  slot="start" (click)="privacypol($event)"></ion-checkbox>
+          <ion-label (click)="goto('privacypolicy')">I agree to privacy policy</ion-label></section>
+       </div>     
+        <div class="action-btn">
+          <ion-button expand="block" class="create-account" type="submit"  [disabled]="!registerForm.valid || !termuse || !privacy" >VERIFY EMAIL</ion-button>
+        </div>    
+        
+        <p>Existing User?<span routerLink="/login">Sign In</span></p>
+      </ion-col>
+    </form>
+    </ion-row>
+  </ion-grid>
+</ion-content>

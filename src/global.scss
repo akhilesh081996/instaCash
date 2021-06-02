@@ -1,0 +1,191 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+
+@font-face {
+    font-family: 'Rubik';
+    src: url('assets/fonts/Rubik-Bold.woff2') format('woff2'),
+        url('assets/fonts/Rubik-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Rubik';
+    src: url('assets/fonts/Rubik-ExtraBold.woff2') format('woff2'),
+        url('assets/fonts/Rubik-ExtraBold.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Rubik';
+    src: url('assets/fonts/Rubik-Light.woff2') format('woff2'),
+        url('assets/fonts/Rubik-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Rubik';
+    src: url('assets/fonts/Rubik-Regular.woff2') format('woff2'),
+        url('assets/fonts/Rubik-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Rubik';
+    src: url('assets/fonts/Rubik-SemiBold.woff2') format('woff2'),
+        url('assets/fonts/Rubik-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Rubik';
+    src: url('assets/fonts/Rubik-Medium.woff2') format('woff2'),
+        url('assets/fonts/Rubik-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'Bebas Neue';
+    src: url('assets/fonts/BebasNeueRegular.woff2') format('woff2'),
+        url('assets/fonts/BebasNeueRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bebas Neue';
+    src: url('assets/fonts/BebasNeue-Bold.woff2') format('woff2'),
+        url('assets/fonts/BebasNeue-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bebas Neue';
+    src: url('assets/fonts/BebasNeueRegular.woff2') format('woff2'),
+        url('assets/fonts/BebasNeueRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bebas Neue';
+    src: url('assets/fonts/BebasNeueLight.woff2') format('woff2'),
+        url('assets/fonts/BebasNeueLight.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bebas Neue';
+    src: url('assets/fonts/BebasNeue-Bold.woff2') format('woff2'),
+        url('assets/fonts/BebasNeue-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bebas Neue';
+    src: url('assets/fonts/BebasNeueLight.woff2') format('woff2'),
+        url('assets/fonts/BebasNeueLight.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap');
+
+
+
+*{
+    outline: none; 
+    -webkit-appearance: none;
+    font-family: 'Rubik';
+}
+ion-title {
+    font-weight: normal;
+    text-transform: uppercase;
+    font-size: 18px;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+ion-slide {
+    padding-bottom: 50px;
+}
+
+ion-grid {
+    height: 100%;
+}
+
+ion-button {
+    text-transform: uppercase;
+}
+
+ion-toolbar {
+    --min-height: 50px;
+}
+
+
+.ion-page {
+    transition: all ease-in 300ms;
+    opacity: 1;
+}
+
+app-tabs.ion-page.ion-page-hidden {
+    opacity: 0;
+}
+
+
+.barcode svg {
+    max-width: 250px!important;
+}

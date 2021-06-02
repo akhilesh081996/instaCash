@@ -1,0 +1,56 @@
+ion-header {
+    opacity: 0;
+    position: absolute;
+}
+
+.bg {
+    position: absolute;
+}
+
+ion-button.create-account {
+    --background: #fff;
+    --border-radius: 14px;
+    margin-bottom: 16px;
+    height: 50px;
+    color: #38b126;
+    --box-shadow: none;
+}
+
+ion-button.log-in {
+    --background: transparent;
+    border: 2px solid #fff;
+    border-radius: 14px;
+    height: 50px;
+    color: #fff;
+    --box-shadow: none;
+}
+
+ion-row.log-in-area {
+    min-height: 100vh;
+    width: 100%;
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+ion-img.logo {
+    width: 80%;
+    max-width: 200px;
+    margin: 0 auto 150px;
+}
+
+.action-btn {
+    padding: 0 20px;
+}
+
+.bg {
+    background: linear-gradient(to bottom, #000000, #013101, #008900, #00b300);
+    background: -webkit-linear-gradient(to bottom, #000000, #013101, #008900, #00b300);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: -webkit-fill-available;
+}

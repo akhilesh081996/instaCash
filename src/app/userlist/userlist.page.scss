@@ -1,0 +1,127 @@
+ion-title {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+}
+
+ion-toolbar {
+    --background: #081319;
+    color: #fff;
+    --padding-start: 12px;
+    --padding-end: 16px;
+    border-radius: 0px 0 20px 20px;
+    --min-height: 50px;
+    ion-icon {
+        font-size: 24px;
+    }
+
+    ion-button {
+        text-transform: capitalize;
+        height: 30px;
+        --border-radius: 30px;
+        --padding-start: 20px;
+        --padding-end: 20px;
+    }
+}
+
+.header-md::after {
+    background-image: none;
+}
+ion-grid {
+    background: white;
+    border-radius: 0 20px 0 0;
+    min-height: 100%;
+}
+
+ion-title b {
+    font-size: 32px;
+    font-weight: 400;
+    padding: 0 3px;
+}
+
+ion-title {
+    h1 {
+        display: flex;
+        align-items: center;
+        font-size: 18px;
+        justify-content: center;
+        margin: 0;
+    }
+}
+
+ion-radio {
+    width: 22px;
+    height: 22px;
+    border-radius: 30px;
+    border: 1px solid #c7c7c7;
+    padding: 3px;
+}
+
+ion-radio.radio-checked {
+    background: #ffffff;
+    position: relative;
+
+}
+
+ion-radio.radio-checked:after {content: '';width: 16px;height: 16px;border-radius: 30px;background: #08b94f;position: absolute;top: 2px;left: 2px;}
+
+
+ion-list {
+    padding: 15px;
+    margin: 0;
+    ion-item {
+        --padding-start: 0px;
+        --inner-padding-end: 0px;
+        --inner-border-width: 0;
+        ion-label {
+            display: flex!important;
+            align-items: center;
+            margin: 0 5px 15px 0;
+            ion-thumbnail {
+                --border-radius: 30px;
+                width: 60px;
+                height: 60px;
+                margin-right: 6px;
+                border: 1px solid #08131947;
+            }
+            h3 {
+                font-size: 16px!Important;
+            }
+            
+            h6 {
+                font-size: 13px!important;
+                color: #a9a9a9;
+            }
+        }
+        
+    }
+    
+}
+
+
+.search-list {
+    padding: 15px;
+}
+
+ion-searchbar {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgb(140 140 140 / 20%);
+    --background: #fff;
+}
+
+ion-spinner {
+    display: block;
+    margin: 0 auto;
+}
+
+ion-img.header-logo {
+    width: 100%!important;
+    max-width: 64px!important;
+    margin-left: 6px;
+    height: auto!important;
+    border-radius: 0!important;
+}
+

@@ -1,0 +1,247 @@
+ion-title {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+}
+
+ion-toolbar {
+    --background: #081319;
+    color: #fff;
+    --padding-start: 12px;
+    --padding-end: 16px;
+    border-radius: 0px 0 0 20px;
+    ion-icon {
+        font-size: 24px;
+    }
+}
+
+.header-md::after {
+    background-image: none;
+}
+
+ion-grid {
+    background: white;
+    border-radius: 0 20px 0 0;
+    min-height: 100%;
+}
+
+ion-icon.add-event {
+    background: #cc0012;
+    border-radius: 30px;
+    color: #fff;
+}
+
+ion-card-content {
+    padding: 10px 5px 5px;
+    display: flex;
+    align-items: center;
+}
+
+
+.parameter-field {
+    border-radius: 0px 20px 0px 0px;
+    background: #fff;
+    padding: 0 5px 5px;
+    ion-input {
+        --background: #f2f2f2!important;
+        border-radius: 16px;
+        --padding-start: 15px!important;
+        font-size: 14px;
+        height: 50px;
+        margin-bottom: 15px;
+        font-family: "Rubik";
+    }
+    ion-select {
+        background: #f2f2f2 !important;
+        border-radius: 16px;
+        --padding-start: 15px!important;
+        font-size: 14px;
+        height: 50px;
+        margin-bottom: 15px;
+        --padding-end: 25px!important;
+        font-family: "Rubik";
+    }
+    h2 {
+        text-align: center;
+        margin-top: 0;
+        font-size: 16px;
+        margin-bottom: 16px;
+        text-transform: uppercase;
+    }
+    span {
+        color: var(--ion-color-primary);
+        text-align: center;
+        display: block;
+        padding: 20px 0;
+    }
+    ion-button {
+        --border-radius: 16px;
+        height: 54px;
+        margin-bottom: 30px;
+        margin-top: 30px;
+        --background: var(--ion-color-primary);
+    }
+}
+ion-title {
+    font-style: normal;
+}
+ion-icon.more {
+    background: #cc0012;
+    color: #fff;
+    padding: 4px;
+    border-radius: 30px;
+    font-size: 17px!important;
+}
+
+.half-input-devide {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.parameter-field ion-input.half-input {
+    width: calc(50% - 8px);
+}
+
+
+ion-datetime {
+    background: #f2f2f2;
+    height: 50px;
+    border-radius: 16px;
+    --padding-start: 15px!important;
+    margin-bottom: 15px;
+    --padding-top: 16px;
+    color: #7b7b7b;
+    font-family: "Rubik";
+    font-size: 14px;
+    font-weight: 300;
+}
+
+ion-datetime.half-input {
+    width: calc(100% - 8px);
+}
+
+
+ion-textarea {
+    background: #f2f2f2;
+    --padding-start: 15px;
+    border-radius: 16px;
+    --padding-top: 15px;
+    min-height: 120px;
+    color: #7b7b7b;
+    font-family: "Rubik";
+    font-size: 14px;
+}
+
+span.time-price {
+    padding: 16px!important;
+    background: #f2f2f2;
+    height: 50px;
+    border-radius: 16px;
+    text-align: left!important;
+    color: #7b7b7b!important;
+    margin-bottom: 16px;
+    font-family: "Rubik";
+    font-size: 14px;
+}
+
+.half-input {
+    width: calc(50% - 8px);
+}
+
+ion-col.create-parameter {
+    padding-top: 20px;
+}
+.upload-img {
+    padding: 0px 0 15px 15px;
+    section {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.image-preview h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #111;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.upload-img ul {
+    margin: 15px 0;
+    padding: 0;
+    list-style: none;
+    width: 100%;
+    white-space: nowrap;
+    overflow: scroll;
+}
+
+.upload-img li {
+    max-width: 70px;
+    margin-right: 10px;
+    display: inline-block;
+}
+
+.add-img {
+    width: 70px;
+    height: 70px;
+    border: 1px dotted #d50012;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+}
+
+
+
+
+
+.add-img ion-img {
+    width: 24px;
+    position: absolute;
+}
+
+input#myfile {
+    max-width: 100px;
+    height: 100px;
+    opacity: 0;
+}
+
+.image-preview {
+    padding: 0 15px 0px;
+}
+
+.action {
+    padding: 15px;
+    ion-button {
+        --border-radius: 16px;
+        height: 50px;
+        margin-bottom: 15px;
+        margin-top: 0px;
+        width: 100%;
+    }
+}
+
+ion-img.header-logo {
+    max-width: 64px;
+    margin-left: 6px;
+}
+
+.half-input-devide section {
+    width: 100%;
+    display: block;
+}
+
+.parameter-field {
+    ion-label {
+        font-size: 14px;
+        margin-bottom: 5px!important;
+        display: block;
+    }
+
+}

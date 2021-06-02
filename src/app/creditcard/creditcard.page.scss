@@ -1,0 +1,199 @@
+ion-toolbar {
+    --background: #081319;
+    color: #fff;
+    --padding-start: 14px;
+    --padding-end: 14px;
+    ion-icon {
+        font-size: 24px;
+    }
+}
+.header-ios ion-toolbar:last-of-type {
+    --border-width: 0px;
+}
+ion-col.upload-profile-pic {
+    background: #ffffff;
+}
+span.card-details {
+}
+ion-col.create-parameter {
+    background: #081319;
+}
+span.card-details {
+    float: left;
+    width: 100%;
+    background: #081319;
+    border-radius: 0 0 0 20px;
+    padding-left: 15px;
+}
+
+.card-top {
+    display: flex;
+    color: #1751a1;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    font-size: 16px;
+}
+
+.card-top p {
+    color: white;
+}
+
+.card-top span {
+    width: 70px;
+}
+
+.card-top span:last-child {
+    text-align: right;
+}
+
+
+.parameter-field {
+    border-radius: 0px 20px 0px 0px;
+    background: #fff;
+    padding: 20px;
+    ion-input {
+        --background: #f2f2f2!important;
+        border-radius: 16px;
+        --padding-start: 15px!important;
+        font-size: inherit;
+        height: 54px;
+        margin-bottom: 15px;
+    }
+    ion-select {
+        background: #f2f2f2!important;
+        border-radius: 16px;
+        --padding-start: 15px!important;
+        font-size: inherit;
+        height: 50px;
+        margin-bottom: 15px;
+        --padding-end: 25px!important;
+    }
+    h2 {
+        text-align: center;
+        margin-top: 0;
+        font-size: 16px;
+        margin-bottom: 16px;
+        text-transform: uppercase;
+    
+    }
+   
+    ion-button {
+        --border-radius: 16px;
+        height: 54px;
+        margin-bottom: 30px;
+        clear: both;
+        --background: var(--ion-color-primary);
+    }
+}
+.parameter-field p {
+    text-align: center;
+    font-size: 12px;
+    padding: 0px 0 10px;
+}
+.slide {
+    padding: 0px;
+}
+.input-division {
+    float: left;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.parameter-field .input-division span {
+    width: 46%;
+    float: left;
+    display: flex;
+}
+
+
+
+
+
+
+.slide {
+    width: 100%;
+}
+
+.credit-card {
+    background: var(--ion-color-primary);
+    width: 100%;
+    float: left;
+    display: flex;
+    padding: 20px;
+    border-radius: 16px;
+    flex-direction: column;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.credit-card p {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    font-size: 14px;
+}
+
+.credit-card h2 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    float: left;
+    padding: 0px 0 16px;
+    font-weight: 100 !important;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+.credit-card h2 ion-img {
+    width: 48px!important;
+}
+
+.credit-card p b {
+    display: block;
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: 300;
+    letter-spacing: 4px;
+}
+
+.credit-card section {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+}
+
+.credit-card section span {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    font-size: 14px;
+}
+
+.credit-card section span b {
+    font-size: 20px;
+    font-weight: 100;
+    margin-top: 8px;
+}
+
+
+ion-img.header-logo {
+    width: 100%!important;
+    max-width: 64px!important;
+    margin-left: 6px;
+    height: auto!important;
+    border-radius: 0!important;
+}
+
+
+
+.parameter-field {
+    ion-label {
+        font-size: 14px;
+        margin-bottom: 5px!important;
+        display: block;
+    }
+
+}

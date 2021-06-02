@@ -1,0 +1,98 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-img slot="start" class="header-logo" src="assets/images/insta-logo.jpg"></ion-img>
+    <ion-title>profile</ion-title>
+    <ion-icon class="wallet-add" slot="end" src="assets/images/add-set_1.svg" (click)="addkycmsg()" *ngIf="userprofile?.kyc != 1"></ion-icon>
+    <ion-icon class="wallet-add" slot="end" src="assets/images/add-set_1.svg" (click)="chooseOption()" *ngIf="userprofile?.kyc == 1"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<div class="top-profile">
+<span>
+  <ion-img *ngIf="userprofile?.userImage" [src]="userprofile?.userImage"></ion-img>
+  <b>{{userprofile?.name}}</b>
+  <p>{{userprofile?.email}}</p>
+  <div class="action-button">
+    <ion-button (click)="showTablefn()" >add funds</ion-button>
+    <ion-button   (click)="navCtrl.navigateForward('editprofile')">Edit profile</ion-button>
+  </div>
+</span>
+</div>
+<ion-list class="setting-list">
+  <ion-list-header>General settings</ion-list-header>
+  <ion-item>
+    <ion-label>Make my profile discoverable to those nearby</ion-label>
+    <ion-toggle slot="end"  [ngModelOptions]="{standalone: true}" [(ngModel)]="discoverable" (ionChange)="changevalue()"
+    ></ion-toggle>
+  </ion-item>
+  <ion-item>
+    <ion-toggle slot="end" [ngModelOptions]="{standalone: true}" [(ngModel)]="auto_send_transaction" (ionChange)="changevalue()"
+    ></ion-toggle>
+    <ion-label>Auto send transaction receipts</ion-label>
+  </ion-item>
+  <ion-item>
+    <ion-label>Show balance information in notifications</ion-label>
+    <ion-toggle slot="end" [ngModelOptions]="{standalone: true}" [(ngModel)]="show_balance_information" (ionChange)="changevalue()"
+    ></ion-toggle>
+  </ion-item>
+</ion-list>
+<div class="cards-wallet" >
+  <h2>Cards in my wallet <ion-img src="assets/images/wallet-menu.svg"></ion-img></h2>
+  <ion-slides [options]="slideOpts">
+    <ion-slide *ngFor="let data of cards;let i = index">
+      <div class="slide">
+       <div class="credit-card">
+         <h2>card detail<ion-img src="assets/images/card-logo.svg"></ion-img></h2>
+         <p>{{data.name}}
+           <b>....  ....  ....  {{data.last4}}</b>
+         </p>
+         <section><span>Expiration Date<b>{{data.exp_month}}/{{data.exp_year}}</b></span>
+           <span>cvv<b>....</b></span>
+         </section>
+       </div>
+      <ion-icon name="trash-outline" class="deletecard" (click)="deleteAlert(data,i)"></ion-icon>
+      </div>
+    </ion-slide> 
+    </ion-slides>
+</div>
+<ion-card>
+  <div class="cards-wallet">
+    <h2>Bank Account Information<ion-img *ngIf="userprofile?.kyc == ''" routerLink="/cardkyc" src="assets/images/add-set_1.svg"></ion-img></h2>
+    <div class="wallet-setting">
+    <section>
+      <span *ngIf="userprofile?.kyc == ''"><b>Pending</b></span>
+      <span *ngIf="userprofile?.kyc == 1"><b> Completed </b></span>
+    </section>
+  </div>
+  </div>
+</ion-card>
+
+<div class="popup-keypad" *ngIf="showTable">
+  <div class="keypad-box">
+    <span>${{number}}</span>
+    <div class="num-pad">
+      <label (click)="addmoney('1')"><b>1</b></label>
+      <label (click)="addmoney('2')"><b>2</b></label>
+      <label (click)="addmoney('3')"><b>3</b></label>
+      <label (click)="addmoney('4')"><b>4</b></label>
+      <label (click)="addmoney('5')"><b>5</b></label>
+      <label (click)="addmoney('6')"><b>6</b></label>
+      <label (click)="addmoney('7')"><b>7</b></label>
+      <label (click)="addmoney('8')"><b>8</b></label>
+      <label (click)="addmoney('9')"><b>9</b></label>
+      <label (click)="cut()"><b>x</b></label>
+      <label (click)="addmoney('0')"><b>0</b></label>
+      <label (click)="addmoney('.')"><b>.</b></label>
+    </div>
+    <div class="action">
+      <ion-button class="amount-cancel" (click)="hideTablefn()">Cancel</ion-button>
+      <ion-button class="amount-nexr" (click)="add()">Next</ion-button>
+    </div>
+  </div>
+</div>
+
+
+
+
+</ion-content>

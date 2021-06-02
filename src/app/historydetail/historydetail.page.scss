@@ -1,0 +1,142 @@
+ion-title {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-transform: capitalize;
+}
+
+ion-toolbar {
+    --background: #081319;
+    color: #fff;
+    --padding-start: 12px;
+    --padding-end: 16px;
+    border-radius: 0px 0px 0px 20px;
+    ion-icon {
+        font-size: 20px;
+    }
+}
+
+.header-md::after {
+    background-image: none;
+}
+
+ion-img.header-logo {
+    max-width: 50px;
+    margin-left: 6px;
+}
+
+
+
+ion-card {
+    background: #ffffff;
+    margin: 0;
+}
+
+
+
+
+ion-card-content ion-label h5 {
+    font-size: 14px!important;
+    text-transform: capitalize;
+    margin: 0 0 25px 0!important;
+    color: #111111;
+}
+
+ion-card-content ion-label h5 b {
+    display: block;
+    font-size: 28px;
+    color: #38b126;
+}
+ion-card-content ion-label h5 b.red {
+    display: block;
+    font-size: 28px;
+    color: var(--ion-color-primary);
+}
+ion-card-content ion-label small {
+    font-size: 12px;
+    color: #898989;
+    margin-top: 0;
+    display: block;
+    line-height: 18px;
+}
+
+ion-card-content ion-label {
+    margin: 0!important;
+}
+
+ion-card-content ion-icon {
+    color: #38b126;
+    font-size: 42px;
+    position: absolute;
+    right: 17px;
+    top: 19px;
+}
+
+ion-card-content ion-icon.red {
+    color: var(--ion-color-primary);
+    font-size: 42px;
+    position: absolute;
+    right: 17px;
+    top: 19px;
+}
+ion-list ion-item {
+   h5 {
+    font-size: 14px !important;
+    text-transform: capitalize;
+    margin: 0 !important;
+    color: #8e8e8e;
+    font-weight: 400;
+   }
+        b {
+            display: block;
+            font-size: 18px;
+            color: #262626;
+            font-weight: 400;
+            margin-top: 5px;
+        }
+        span {
+            font-size: 14px;
+            color: #8e8e8e;
+        }
+    }
+
+   
+    
+    ion-list {       
+    padding: 10px;
+    background: #fafafa !important;
+    border-radius: 8px;
+    border: 1px solid #f2f2f2;
+
+        ion-item {
+            --padding-start: 0;
+            --inner-padding-end: 0;
+            --inner-border-width: 0;
+            --background: transparent;
+            --min-height: 100px;
+            border-bottom: 1px solid #f2f2f2;
+            ion-icon {
+                background: transparent;
+                width: 30px;
+                height: 30px;
+                border-radius: 21px;
+                border: 1px solid #38b126;
+                padding: 5px;
+                color: #c8c8c8;
+            }
+        }
+    }
+
+    ion-list ion-item:last-child {
+        border-bottom: 0;
+        --min-height: 60px;
+        ion-label {
+            margin: 0;
+            h6 {
+                font-size: 12px;
+                color: #8e8e8e;
+                line-height: 1.5;
+            }
+        }
+    }

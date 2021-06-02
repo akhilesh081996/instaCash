@@ -1,0 +1,297 @@
+ion-title {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+}
+
+ion-toolbar {
+    --background: #081319;
+    color: #fff;
+    --padding-start: 12px;
+    --padding-end: 16px;
+    border-radius: 0px 0 0 20px;
+    ion-icon {
+        font-size: 24px;
+    }
+}
+
+
+ion-grid {
+    background: white;
+    min-height: 100%;
+}
+
+
+.header-md::after {
+    background-image: none;
+}
+ion-content {
+    --background: #fff;
+}
+[col-1] {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 8.33333%;
+    -ms-flex: 0 0 8.33333%;
+    flex: 0 0 14.285714285714286%;
+    width: 14.285714285714286%;
+    max-width: 14.285714285714286%;
+    margin: auto;
+}
+
+.col {
+    text-align: center;
+    padding: 5px;
+}
+
+.last-month,
+.next-month {
+    color: #b1b1b1;
+}
+
+.currentDate,
+.otherDate {
+    padding: 5px;
+}
+
+.currentDate {
+    color: #fff;
+    border-radius: 100%;
+    width: 26px;
+    height: 26px;
+    display: block;
+    margin: auto;
+    position: relative;
+    background: var(--ion-color-primary) !important;
+    display: flex;
+    align-items: center;
+}
+
+.calendar-date {
+    font-size: 14px;
+    color: #081319;
+    font-weight: normal;
+    line-height: 28px;
+}
+
+.calendar-body {
+    color: #d2d0d0;
+    padding-bottom: 22px;
+}
+
+.calendar-month ion-icon {
+    background: #081319 !important;
+    border-radius: 100%;
+    padding: 4px;
+    font-size: 20px;
+    color: #fff;
+}
+
+.calendar-month ion-col[size="6"] {
+    margin: auto;
+    padding-top: 0;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    color: #000 !important;
+    text-transform: uppercase;
+}
+
+.calendar-header {
+    background-color: transparent;
+    margin-top: 15px;
+    margin-bottom: 12px;
+}
+
+.calendar-weekday {
+    text-transform: uppercase; 
+    font-size: 14px;
+    font-weight: bold;
+    font-family: SF-UI-Display-Regular;
+    color: #b9b9b9;
+}
+
+.event-bullet {
+    margin: 2px auto;
+    height: 5px;
+    width: 5px;
+    background-color: green;
+    border-radius: 30px;
+}
+
+.selected-date {
+    background-color: blue;
+    color: #fff;
+    border-radius: 100%;
+    width: 26px;
+    height: 26px;
+    margin: auto;
+    position: relative;
+    background: #e7191d !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.unselected-date {
+    border: none;
+}
+
+.calendar-body {
+    .grid {
+        padding: 0;
+    }
+    .col:last-child {
+        border-right: none;
+    }
+    .calendar-weekday,
+    .calendar-date {
+        text-align: center;
+        margin: 0;
+    }
+}
+
+
+ion-row.calendar_sec.appoint_sec {
+    padding: 0 15px 15px;
+}
+
+ion-row.calendar-month {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+ion-icon.add-event {
+    background: #cc0012;
+    border-radius: 30px;
+    color: #fff;
+}
+
+ion-card-content {
+    padding: 10px 5px 5px;
+    display: flex;
+    align-items: center;
+    span {
+        display: flex;
+        flex-direction: column;
+        text-transform: uppercase;
+        font-size: 14px;
+        align-items: center;
+        border-right: 1px solid #e8e8e8;
+        padding: 0 10px 0 0;
+        color: #cc0012;
+        b {
+            font-size: 28px;
+            color: #111;
+            line-height: 1;
+        }
+    }
+}
+
+
+
+
+ion-card {
+    padding: 5px;
+    margin-top: 0;
+}
+
+ion-label {
+    padding-left: 10px;
+    width: 100%;
+
+}
+
+section {
+    font-family: 'Bebas Neue';
+    font-size: 30px;
+    font-weight: 600;
+    color: #111;
+}
+
+h2 {
+    font-size: 18px!important;
+    color: #111;
+    text-transform: uppercase;
+    font-weight: 700!important;
+    margin: 0;
+}
+
+
+
+.event-img {
+    position: relative;
+    ion-icon {
+        position: absolute;
+        right: 45px;
+        top: 15px;
+        font-size: 24px;
+        color: white;
+    }
+    .redheart{
+        color: #cc0012;
+        
+    }
+}
+
+.days-left {
+    font-size: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+    background: #cc0012;
+    border-radius: 40px;
+    justify-content: center;
+    color: #fff;
+    position: absolute;
+    right: 10px;
+    bottom: -12px;
+    span {
+        display: flex;
+        flex-direction: column;
+        text-transform: uppercase;
+        font-size: 10px;
+        align-items: center;
+        border-right: 0;
+        padding: 0;
+        color: #fff;
+    }
+}
+
+h1 {
+    margin: 0;
+    font-size: 16px;
+    text-transform: capitalize;
+    line-height: 1;
+    padding: 0px 15px 10px;
+}
+.event-img img {
+    object-fit: cover;
+    width: 100%;
+}
+.delete{
+    right: 15px !important;
+}
+
+.bg-decoration {
+    background: #081319;
+    height: 30px;
+}
+
+span.deco {
+    display: block;
+    width: 100%;
+    height: 30px;
+    background: #fff;
+    border-radius: 0 20px 0 0;
+}
+
+ion-img.header-logo {
+    max-width: 64px;
+    margin-left: 0px;
+}

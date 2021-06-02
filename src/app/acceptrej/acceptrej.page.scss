@@ -1,0 +1,142 @@
+ion-toolbar {
+    --background: #081319;
+    color: #fff;
+    --padding-start: 14px;
+    --padding-end: 14px;
+    ion-icon {
+        font-size: 24px;
+    }
+}
+.header-ios ion-toolbar:last-of-type {
+    --border-width: 0px;
+}
+
+
+
+ion-col.upload-profile-pic {
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: calc(100vh - 50px);
+}
+span.profile-pic {
+    background: #fff;
+    display: flex;
+    padding: 30px 15px 0;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 0px 0px 20px 20px;
+    text-transform: capitalize;
+    font-size: 18px;
+    color: #262626;
+   img {
+    z-index: 2;
+    position: relative;
+    }   
+}
+
+
+ion-avatar {
+    width: 110px;
+    height: 110px;
+    margin-bottom: 26px;
+    position: relative;
+}
+
+ion-avatar:before {
+    content: "";
+    width: 120px;
+    height: 120px;
+    background: rgb(8 19 25 / 15%);
+    position: absolute;
+    border-radius: 80px;
+    top: -5px;
+    left: -5px;
+    z-index: 0;
+}
+
+ion-avatar:after {
+    content: "";
+    width: 130px;
+    height: 130px;
+    background: rgb(8 19 25 / 17%);
+    position: absolute;
+    border-radius: 80px;
+    top: -10px;
+    left: -10px;
+    z-index: 0;
+    box-shadow: 0px 8px 24px rgb(0 0 0 / 15%);
+}
+
+section {
+    padding: 30px 15px 30px;
+    text-align: center;
+    min-height: calc(100vh - 260px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+section h4 {
+    font-size: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    font-weight: normal;
+    color: #262626;
+}
+
+section h4 b {
+    font-size: 48px;
+    font-weight: normal;
+    letter-spacing: -2px;
+}
+
+.request-money small {
+    font-size: 14px!important;
+}
+
+
+
+
+h2 {
+    font-size: 24px;
+    margin: 0 0 25px 0;
+    font-weight: 500;
+    color: #262626;
+}
+
+
+.act-btn span {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.act-btn {
+    margin-top: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px 0;
+    ion-button {
+        --box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+        width: 54px !important;
+        height: 54px !important;
+        --border-radius: 40px;
+        font-size: 32px !important;
+        --padding-start: 0;
+        --padding-end: 0;
+        margin-bottom: 15px;
+    }    
+}
+
+ion-button.accept {
+    --background: linear-gradient(145deg, #50c248, #44a33c);
+}
+
+ion-button.reject {
+    --background: linear-gradient(145deg, #d80c00, #b60a00);
+}

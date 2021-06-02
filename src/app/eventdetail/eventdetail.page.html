@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-icon slot="start" name="arrow-back-outline" (click)="back()"></ion-icon>
+    <ion-img slot="start" class="header-logo" src="assets/images/insta-logo.jpg"></ion-img>  
+    <ion-title>event Detail</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+<ion-card>
+  <ion-img *ngIf="result?.media[0]?.upload_preview" [src]="result?.media[0]?.upload_preview"></ion-img>
+  <ion-img *ngIf="!result?.media[0]?.upload_preview" src="/assets/images/slide-1.png"></ion-img>
+</ion-card>
+<ion-list>
+<ion-item>
+  <ion-label>
+    <h2>{{result?.event_title}}</h2>
+    <small>{{result?.event_day}} {{result?.event_month}}<b>{{result?.from_time_hour}} - {{result?.to_time_hour}}</b></small>
+  </ion-label>
+  <div class="price">
+    ${{result?.price}}
+  </div>
+</ion-item>
+</ion-list>
+<div class="featuring">
+<h4>featuring</h4>  
+<h2>Headliner</h2>
+<small>{{result?.address_street1}},{{result?.address_street2}} {{result?.state}}</small>
+</div>
+<div class="upload-img">
+  <h3>Images</h3>
+  <section>
+    <ul>
+      <li *ngFor="let img of result?.media">
+        <ion-img [src]="img.upload_preview">
+        </ion-img>
+      </li>
+    </ul>
+  </section>  
+</div>
+
+<div class="description">
+  <h3>Description</h3>
+  <p [innerHTML]="result?.description"></p>
+</div>
+<div class="action" >
+  <ion-button *ngIf="result?.user_id != user?.user_id" routerLink="/bookevent/{{id}}/{{result?.price}}">Purchase</ion-button>
+  <ion-button *ngIf="result?.user_id == user?.user_id" routerLink="/liveevent/{{result?.event_id}}">Go live</ion-button>
+</div>
+</ion-content>

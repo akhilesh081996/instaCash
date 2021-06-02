@@ -1,0 +1,58 @@
+
+
+.swiper-slide:not(.swiper-slide-active) > div {
+    display:none;
+}
+
+ion-slides {
+    background: linear-gradient(to bottom, #000000, #013101, #008900, #00b300);
+}
+
+ion-slide {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+
+ion-slide span {
+    position: absolute;
+    bottom: 0;
+    padding: 0 24px;
+}
+
+ion-header {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+}
+
+ion-slide span h2 {
+    color: #fff;
+    max-width: 196px;
+    text-transform: capitalize;
+    margin: 0 auto;
+}
+
+ion-slide span p {
+    color: #fff;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+ion-button {
+    background: #fff;
+    height: 50px;
+    border-radius: 20px;
+    color: var(--ion-color-primary);
+    margin-bottom: 50px;
+    margin-top: 30px;
+}
+
+ion-img {
+    width: 80%;
+    max-width: 200px;
+    margin: 137px auto 40px;
+    position: absolute;
+    top: 0;
+}

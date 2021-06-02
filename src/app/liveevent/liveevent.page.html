@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-icon slot="start" name="arrow-back-outline" (click)="goBack()"></ion-icon>
+    <ion-title>Live Event</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="make-call-parent" [ngClass]="startlive ? 'video-call-section' : ''">
+  <div class="new-call-action" >
+    <ion-button (click)="startCall()" >Start live Event</ion-button>
+    <ion-button class="endcall" (click)="endCall()" >End video</ion-button>
+  </div>
+</div>
+</ion-content>

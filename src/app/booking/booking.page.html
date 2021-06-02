@@ -1,0 +1,83 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-img slot="start" class="header-logo" src="assets/images/insta-logo.jpg"></ion-img>
+    <ion-title>booking</ion-title>
+  </ion-toolbar>
+  <div class="bg-decoration">
+    <span class="deco"></span>
+  </div>
+</ion-header>
+
+<ion-content>
+ 
+
+  <ion-grid class="ion-no-padding text_sec">
+    <ion-row class="calendar_sec appoint_sec">
+        <ion-col size="12" no-padding>
+            <div class="calendar-header">
+                <ion-row class="calendar-month">
+                    <div (click)="goToLastMonth()" text-right>
+                        <ion-icon name="arrow-back"></ion-icon>
+                    </div>
+                    <div text-center>{{currentMonth}} {{currentYear}}</div>
+                    <div size="3" (click)="goToNextMonth()" text-left>
+                        <ion-icon name="arrow-forward"></ion-icon>
+                    </div>
+                </ion-row>
+            </div>
+            <div class="calendar-body">
+                <ion-grid>
+                    <ion-row class="calendar-weekday">
+                        <ion-col>Sun</ion-col>
+                        <ion-col>Mon</ion-col>
+                        <ion-col>Tue</ion-col>
+                        <ion-col>Wed</ion-col>
+                        <ion-col>Thu</ion-col>
+                        <ion-col>Fri</ion-col>
+                        <ion-col>Sat</ion-col>
+                    </ion-row>
+                    <ion-row class="calendar-date">
+                        <ion-col col-1 *ngFor="let lastDay of daysInLastMonth" class="last-month">{{lastDay}}</ion-col>
+                        <ion-col col-1 *ngFor="let day of daysInThisMonth" (click)="selectDate(day)">
+                            <span class="currentDate" *ngIf="currentDate === day; else otherDate">{{day}}</span>
+                            <ng-template #otherDate class="otherDate">
+
+                                <div *ngIf="isday!=day">
+                                    <span>{{day}}</span>
+                                </div>
+                                <div *ngIf="isday==day">
+                                    <span class="selected-date" *ngIf="isday==day">{{day}}</span>
+                                </div>
+                            </ng-template>
+                        </ion-col>
+                        <ion-col col-1 *ngFor="let nextDay of daysInNextMonth" class="next-month">{{nextDay}}</ion-col>
+                    </ion-row>
+                </ion-grid>
+            </div>
+        </ion-col>
+    </ion-row>
+
+
+    <ion-card *ngFor="let data of booking;let i = index" >
+        <div class="event-img">
+        <img *ngIf="data.media[0]?.upload_preview" [src]="data.media[0]?.upload_preview" /> 
+        <img *ngIf="!data.media[0]?.upload_preview" src="/assets/images/slide-1.png" /> 
+
+        <div class="days-left">{{data.duration}}<span>Hrs</span></div>  
+      </div>
+        <ion-card-content routerLink="/eventdetail/{{data.event_id}}">
+        <span>
+          <b>{{data.event_day}}</b>
+          {{data.event_month}}
+        </span>
+        <ion-label>
+          <h2>{{data.event_title}}</h2>
+          <p>{{data.description}}</p>
+          <small>{{data.from_time_hour}} - {{data.to_time_hour}}</small>
+        </ion-label>
+        <section>${{data.price}}</section>
+        </ion-card-content>
+      </ion-card>
+</ion-grid>
+
+</ion-content>

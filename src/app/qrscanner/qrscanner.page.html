@@ -1,0 +1,41 @@
+<ion-content class="bg-transparent relative">
+  <div class="qr-bg">
+  <ng-container >
+    <div class="close-icon" (click)="back()"><ion-icon name="close-sharp" slot="end" ></ion-icon></div>
+    <div class="segment-design">
+    <ion-segment  (ionChange)="segmentChanged()" [(ngModel)]="segment">
+      <ion-segment-button value="0">
+        <ion-label>Scan code</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="1">
+        <ion-label>My QR</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="2">
+        <ion-label>Pay at the store</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+    <ion-slides #slides (ionSlideDidChange)="slideChanged()" >
+      <ion-slide>
+         <ion-icon src="assets/qrscanner.svg" class="scanner-icon"></ion-icon>
+      </ion-slide>
+      <ion-slide>
+        <div class="qr-set">
+          <div class="qr">
+            <ion-img src="assets/images/qr-codeeee1.png"></ion-img>
+           <div id="canvas"></div>
+          </div>
+        </div>     
+      </ion-slide>
+      <ion-slide>
+        <div class="barcode">
+          <ngx-barcode *ngFor="let bcValue of values" [bc-element-type]="elementType" [bc-value]="barCodeValue" [bc-format]="format" [bc-line-color]="lineColor"
+          [bc-width]="width" [bc-height]="height" [bc-display-value]="displayValue" [bc-font-options]="fontOptions" [bc-font]="font"
+          [bc-text-align]="textAlign" [bc-text-position]="textPosition" [bc-text-margin]="textMargin" [bc-font-size]="fontSize" [bc-background]="background"
+          [bc-margin]="margin" [bc-margin-top]="marginTop" [bc-margin-bottom]="marginBottom"  [bc-margin-left]="marginLeft" [bc-margin-right]="marginRight" [bc-padding]="padding"></ngx-barcode>
+        </div>
+     </ion-slide>
+    </ion-slides>
+  </ng-container>
+</div>
+</ion-content>

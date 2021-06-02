@@ -1,0 +1,109 @@
+* {
+    font-family: 'Rubik';
+}
+
+ion-header {
+    opacity: 0;
+    position: absolute;
+}
+ion-content {
+    --background: transparent;
+}
+
+.bg {
+    position: absolute;
+}
+
+ion-button.create-account {
+    --background: transparent;
+    border: 2px solid #fff;
+    border-radius: 14px;
+    height: 50px;
+    color: #fff;
+    --box-shadow: none;
+}
+
+
+
+ion-row.log-in-area {
+    min-height: 100vh;
+    width: 100%;
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+ion-img.logo {
+    width: 80%;
+    max-width: 200px;
+    margin: 40px auto 40px;
+}
+
+.action-btn {
+    padding: 24px 20px 0;
+    width: 100%;
+    float: left;
+}
+
+.parameters {
+    padding: 8px 20px 8px 20px;
+    a {
+        float: right;
+        display: flex;
+        padding: 10px 0;
+        text-decoration: none;
+        color: var(--ion-color-primary);
+    }
+    ion-label {color: #fff;
+        text-transform: uppercase;
+    }
+    ion-input {
+        border-left: 1px solid #bbb;
+        --padding-top: 5px!important;
+        --padding-bottom: 5px!important;
+        color: #fff;
+        --padding-start: 10px;
+
+    }
+ion-item {
+    --background: #ffffff45;
+    --inner-border-width: 0px;
+    border-radius: 14px;
+    width: 100%;
+    margin-top: 10px;   
+    --padding-top: 2px;
+    --padding-bottom: 2px;
+    ion-img {
+        width: 20px;
+    margin-right: 12px;
+    height: 20px;
+    }
+}
+}
+
+ion-footer{
+    bottom: 0;
+    background: transparent;
+    text-align: center;
+}
+
+ion-footer p {
+    color: #fff;
+}
+
+ion-footer p span {
+    color: var(--ion-color-primary)#ff002b;
+}
+
+
+.bg {
+    background: linear-gradient(to bottom, #000000, #013101, #008900, #00b300);
+    background: -webkit-linear-gradient(to bottom, #000000, #013101, #008900, #00b300);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: -webkit-fill-available;
+}

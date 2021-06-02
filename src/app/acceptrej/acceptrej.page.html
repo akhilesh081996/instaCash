@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+     <ion-icon name="arrow-back-outline" (click)="back()"></ion-icon>
+    <ion-title>money request</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid class="ion-no-padding">
+    <ion-row>
+      <ion-col size="12" class="upload-profile-pic ion-no-padding">
+          <span class="profile-pic">
+            <h2 >Customer request</h2>
+            <ion-avatar>
+              <img  [src]="reciverData?.userpic">
+            </ion-avatar> 
+            <small>From</small>          
+           {{reciverData?.name}}
+          </span>
+          <section>  
+            <div class="request-money">
+              <h4>$<b>{{reciverData?.amount}}</b></h4>
+            <small>Amount requested</small>
+            </div>         
+            
+            <div class="act-btn">              
+              <span>
+                <ion-button class="reject" (click)="accprej('reject')"><ion-icon name="close"></ion-icon></ion-button>
+                Decline
+              </span>
+              <span>
+                <ion-button class="accept" (click)="accprej('accept')" ><ion-icon name="checkmark"></ion-icon></ion-button>
+                Accept and Send
+              </span>        
+            </div>
+          </section>         
+      </ion-col>
+      </ion-row>
+      </ion-grid>
+</ion-content>

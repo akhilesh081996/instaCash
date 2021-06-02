@@ -1,0 +1,146 @@
+
+
+ion-title {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+    padding: 0 0 0 100px;
+}
+
+ion-toolbar {
+    --background: #081319;
+    color: #fff;
+    --padding-start: 12px;
+    --padding-end: 16px;
+    border-radius: 0px 0 20px 20px;
+    --min-height: 50px;
+    ion-icon {
+        font-size: 24px;
+    }
+}
+
+.header-md::after {
+    background-image: none;
+}
+
+
+ion-grid {
+    --background: #081319;
+}
+
+.money-pannel {
+    background: var(--ion-color-primary);
+    border-radius: 16px;
+    padding: 40px 30px;
+}
+
+.money-pannel h2 {
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 60px;
+    margin: 0;
+}
+
+.money-pannel h2 small {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+ion-col.money-card {
+    padding: 15px;
+    background: #081319;
+    border-radius: 0px 0px 0px 20px;
+}
+
+.bg-decoration {
+    background: #081319;
+    height: 30px;
+}
+
+span.deco {
+    display: block;
+    width: 100%;
+    height: 30px;
+    background: #fff;
+    border-radius: 0 20px 0 0;
+}
+
+.money-amt {
+    text-align: center;
+    margin-bottom: 15px;
+span {
+    background: #f1f1f1;
+    padding: 15px 30px;
+    font-size: 24px;
+    border-radius: 30px;
+    margin: 0 auto;
+    display: inline-block;
+}
+}
+
+.keypad {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.keypad span {
+    width: 33.3%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.keypad span b {
+    font-size: 24px;
+    background: #fff;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    margin: 15px;
+    box-shadow: 0px 0px 20px rgb(111 111 111 / 20%);
+    color: #333;
+    font-weight: normal;
+}
+
+.act-btn {
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+ion-button {
+    text-transform: capitalize;
+}
+
+ion-img.header-logo {
+    max-width: 60px;
+    margin-left: 20px;
+}
+
+.header-ios ion-toolbar:last-of-type {
+    --border-width: 0;
+}
+.transparentBody {
+    background: transparent !important;
+}
+.show-qr-scanner {
+    display: none;
+  }
+
+  ion-img.header-logo {
+    width: 100%!important;
+    max-width: 64px!important;
+    margin-left: 6px;
+    height: auto!important;
+    border-radius: 0!important;
+}
